@@ -21,6 +21,7 @@ středně široké obrazovky:
 body {
     margin: 0;
     font-family: 'Source Sans Pro', sans-serif;
+    color: #F5F5F5;
 }
 
 .paticka {
@@ -34,6 +35,156 @@ body {
 }
 
 
+
+
 /* ------------------------------- */
 /* ----- DOLE BUDE TVOJE CSS ----- */
 /* ------------------------------- */
+.container {
+    flex-direction: column;
+}
+h1 {
+    font-weight: 800;
+    font-size: 1.75rem;
+    padding: 10rem 0.5rem 0.5rem 0.5rem;
+    margin: 0;
+}
+h2 {
+    font-weight: 800;
+    font-size: 1.2rem;
+    padding: 5rem 0.5rem 0.5rem 0.5rem;
+    margin: 0;
+}
+p1 {
+    float: left;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+    
+}
+p2 {
+    float: right;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+.hlavni {
+    background-image: url("images/salat.jpg");
+    background-size: 100%;
+    min-height: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 2;
+    padding: 0;
+    margin: 0;
+}
+.maly {
+    min-height: 90px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-grow: 1;
+    padding:0;
+    margin:0;
+}
+
+.recept2 {
+    background-image: url("images/chlebicek.jpg");
+}
+.recept3 {
+    background-image: url("images/cizrna.jpg");
+}
+.recept4 {
+    background-image: url("images/tacos.jpg");
+}
+.recept5 {
+    background-image: url("images/burger.jpg");
+}
+
+@media (min-width: 480px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .hlavni {
+        flex-basis:100%;
+        min-height: 250px;
+        flex-wrap: wrap;
+    }
+    .malerecepty {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap
+    }
+
+    .maly {
+        min-height: 150px;
+        flex-basis: 50%;
+    }
+        
+    p1{
+        padding: 1.25rem;
+    }
+    p2 {
+        padding: 1.25rem;
+    }
+    h1 {
+        padding: 40% 1.25rem 1.25rem 1.25rem;
+        font-size: 2rem;
+    }
+    h2 {
+        padding: 40% 1.25rem 1.25rem 1.25rem;
+        font-size: 1.5rem;
+    }
+}
+@media (min-width: 860px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .hlavni {
+        min-height: 400px;
+        flex-basis: 33.33%;
+    }
+
+    .malerecepty {
+        display: flex;
+        min-height: 400px;
+        flex-basis: 66.66%;
+    }
+    .maly {
+        min-height: 200px;
+        height: contain;
+    }
+    p1 {
+        padding: 1.25rem;
+    }
+
+    p2 {
+        padding: 1.25rem;
+    }
+
+    h1 {
+        padding: 65% 1.25rem 1.25rem 1.25rem;
+        font-size: 3rem;
+    }
+
+    h2 {
+        padding: 40% 1.25rem 1.25rem 1.25rem;
+        font-size: 1.75rem;
+    }
+    .recept2{
+        order: 1;
+    }
+    .recept3{
+        order:3;
+    }
+    .recept4{
+        order:2;
+    }
+    .recept5{
+        order:4;
+    }
+}
